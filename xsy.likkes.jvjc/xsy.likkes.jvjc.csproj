@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47CD3A46-C397-425C-B07B-2604CAD4CE18}</ProjectGuid>
+    <ProjectGuid>{5E490DA4-EA7F-4D25-94F0-8EB3BCE0D357}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>xsy.likes.IfGenering</RootNamespace>
-    <AssemblyName>xsy.likes.IfGenering</AssemblyName>
+    <RootNamespace>xsy.likkes.jvjc</RootNamespace>
+    <AssemblyName>xsy.likkes.jvjc</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,33 +34,46 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\package\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\package\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\package\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\package\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\package\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetTokenReturn.cs" />
-    <Compile Include="IfGener.cs" />
+    <Compile Include="Jydata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XmlModel\GetTokenReturn.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\xsy.likes. IfGenering\xsy.likes. IfGenering.csproj">
+      <Project>{47CD3A46-C397-425C-B07B-2604CAD4CE18}</Project>
+      <Name>xsy.likes. IfGenering</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xsy.likes.Base\xsy.likes.Base.csproj">
       <Project>{5767B7F1-8C8C-42B6-8C08-9A3114676826}</Project>
       <Name>xsy.likes.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\xsy.likes.WebServices\xsy.likes.WebServices.csproj">
-      <Project>{FD226D1F-9369-4185-A554-397D639FD7E5}</Project>
-      <Name>xsy.likes.WebServices</Name>
+    <ProjectReference Include="..\xsy.likes.DB\xsy.likes.DB.csproj">
+      <Project>{D4B0E0D6-B96A-4F22-9F2E-3D3E292BDC57}</Project>
+      <Name>xsy.likes.DB</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

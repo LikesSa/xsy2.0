@@ -61,10 +61,10 @@
             // 
             // show_textBox
             // 
-            this.show_textBox.Location = new System.Drawing.Point(26, 123);
+            this.show_textBox.Location = new System.Drawing.Point(26, 110);
             this.show_textBox.Multiline = true;
             this.show_textBox.Name = "show_textBox";
-            this.show_textBox.Size = new System.Drawing.Size(454, 292);
+            this.show_textBox.Size = new System.Drawing.Size(627, 327);
             this.show_textBox.TabIndex = 2;
             // 
             // progressBar1
@@ -86,24 +86,24 @@
             // 
             // show_webBrowser
             // 
-            this.show_webBrowser.Location = new System.Drawing.Point(893, 608);
+            this.show_webBrowser.Location = new System.Drawing.Point(754, 524);
             this.show_webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.show_webBrowser.Name = "show_webBrowser";
-            this.show_webBrowser.Size = new System.Drawing.Size(109, 96);
+            this.show_webBrowser.Size = new System.Drawing.Size(358, 128);
             this.show_webBrowser.TabIndex = 5;
             // 
             // inFo_textBox
             // 
             this.inFo_textBox.Location = new System.Drawing.Point(26, 41);
             this.inFo_textBox.Name = "inFo_textBox";
-            this.inFo_textBox.Size = new System.Drawing.Size(214, 25);
+            this.inFo_textBox.Size = new System.Drawing.Size(234, 25);
             this.inFo_textBox.TabIndex = 6;
             // 
             // show_pictureBox
             // 
-            this.show_pictureBox.Location = new System.Drawing.Point(121, 656);
+            this.show_pictureBox.Location = new System.Drawing.Point(277, 579);
             this.show_pictureBox.Name = "show_pictureBox";
-            this.show_pictureBox.Size = new System.Drawing.Size(511, 32);
+            this.show_pictureBox.Size = new System.Drawing.Size(548, 23);
             this.show_pictureBox.TabIndex = 7;
             this.show_pictureBox.TabStop = false;
             // 
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 444);
+            this.ClientSize = new System.Drawing.Size(995, 595);
             this.Controls.Add(this.show_pictureBox);
             this.Controls.Add(this.inFo_textBox);
             this.Controls.Add(this.show_textBox);

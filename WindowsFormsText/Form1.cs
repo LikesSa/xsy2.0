@@ -1,6 +1,11 @@
-﻿using System;
-using System.Drawing;
+﻿using NPinyin;
+using System;
+using System.Text;
 using System.Windows.Forms;
+using xsy.likes.Base;
+using xsy.likes.szs;
+using xsy.likes.WebServices;
+using xsy.likkes.jvjc;
 
 namespace WindowsFormsText
 {
@@ -13,27 +18,42 @@ namespace WindowsFormsText
 
 
 
-
+        private string custbackime = ConfigContent.AppSettingsGet("custbackime");
+        private string cusshortnametime = ConfigContent.AppSettingsGet("cusshorttime");
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            //this.reportViewer1.RefreshReport();
         }
 
 
         private void button_Start_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
+            //string m = inFo_textBox.Text;
+            //Encoding gb2312 = Encoding.GetEncoding("GB2312");
+            //string s = Pinyin.ConvertEncoding(m, Encoding.UTF8, gb2312);
 
-                show_textBox.Text = dialog.FileName;
-
-            }
-
-            show_pictureBox.Image = Image.FromFile(@"C:\Users\Likes\Pictures\888\5ae343110306b255.jpeg"); ;
+            //show_textBox.Text = Pinyin.GetInitials(s, gb2312);
 
 
 
+            //Jydata jd = new Jydata();
+
+            //jd.Text();
+
+            //jd.Text();
+            //OpenFileDialog dialog = new OpenFileDialog();
+            //if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+
+            //    show_textBox.Text = dialog.FileName;
+
+            //}
+
+            //show_pictureBox.Image = Image.FromFile(@"C:\Users\Likes\Pictures\888\5ae343110306b255.jpeg"); ;
+
+            //WallPageGet wpg = new WallPageGet();
+            //wpg.picSavebyUrl();
 
 
 

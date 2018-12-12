@@ -10,9 +10,9 @@ namespace xsy.likes.IfGenering
 {
     public class GetTokenReturn : IDisposable
     {
-        string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
+        //string path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 
-        private const string xmlFileName = "path" + @"\XmlModel\GetTokenReturn.xml";  //string Path1 = @".\Data\test.txt"; 
+        private  string xmlFileName = "XmlModel/GetTokenReturn.xml";  //string Path1 = @".\Data\test.txt"; 
         private readonly XmlFiles xmlFile;
 
         public string id { get; set; }

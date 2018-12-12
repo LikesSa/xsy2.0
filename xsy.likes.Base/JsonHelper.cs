@@ -6,10 +6,11 @@ using System.Data.Common;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Web.Script.Serialization;
 
 namespace xsy.likes.Base
 {
- public class JsonHelper
+ public class JsonHelper 
     {
         #region 私有方法
         /// <summary>
@@ -318,5 +319,48 @@ namespace xsy.likes.Base
             return jsonString.ToString();
         }
         #endregion
+
+        public static DataTable ToDataTable(string json)
+        {
+            DataTable dataTable = new DataTable();  //实例化
+            DataTable result;
+            try
+            {
+                JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+                javaScriptSerializer.MaxJsonLength = Int32.MaxValue; //取得最大数值
+                ArrayList arrayList = javaScriptSerializer.Deserialize<ArrayList>(json);
+                if (arrayList.Count > 0)
+                {
+                    foreach (Dictionary<string, object> dictionary in arrayList)
+                    {
+                        if (dictionary.Keys.Count<string>() == 0)
+                        {
+                            result = dataTable;
+                            return result;
+                        }
+                        if (dataTable.Columns.Count == 0)
+                        {
+                            foreach (string current in dictionary.Keys)
+                            {
+                                dataTable.Columns.Add(current, dictionary[current].GetType());
+                            }
+                        }
+                        DataRow dataRow = dataTable.NewRow();
+                        foreach (string current in dictionary.Keys)
+                        {
+                            dataRow[current] = dictionary[current];
+                        }
+
+                        dataTable.Rows.Add(dataRow); //循环添加行到DataTable中
+                    }
+                }
+            }
+            catch
+            {
+            }
+            result = dataTable;
+            return result;
+        }
+
     }
 }

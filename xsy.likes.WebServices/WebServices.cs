@@ -9,7 +9,7 @@ namespace xsy.likes.WebServices
     public class WebServices : IWeb
     {
         /// <summary>
-        /// 通用GET方法  System.Ne
+        /// 通用GET方法  System.Net
         /// </summary>
         /// <param name="url"></param>
         /// <param name="result"></param>
@@ -163,10 +163,10 @@ namespace xsy.likes.WebServices
         /// <param name="t"></param>
         /// <param name="chartSet"></param>
         /// <returns></returns>
-        public bool RequestPostDataShaderJson<T>(string url, string input, out T t, string chartSet) where T : class, new()
+        public bool RequestPostDataShaderJson<T>(string url, string input, out T t,string code = null, string contenttype= "application/x-www-form-urlencoded",string chartSet = "utf-8") where T : class, new()
         {
             string result;
-            bool operateResult = RequestPostData(url, input,out result);
+            bool operateResult = RequestPostData(url, input,out result,code,contenttype);
 
             if (operateResult)
             {

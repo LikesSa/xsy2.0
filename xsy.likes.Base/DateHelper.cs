@@ -485,6 +485,19 @@ namespace xsy.likes.Base
             return t;
         }
 
+        /// <summary>
+        /// 日期转换为时间戳
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public static long ConvertDateTimeToInt(string strtime)
+        {
+            DateTime time = Convert.ToDateTime(strtime);
+            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1, 0, 0, 0, 0));
+            long t = (time.Ticks - startTime.Ticks) / 10000;   //除10000调整为13位      
+            return t;
+        }
+
 
     }
 }

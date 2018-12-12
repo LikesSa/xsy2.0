@@ -37,8 +37,18 @@
     <ApplicationIcon>Rainbow_.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\package\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPinyin">
+      <HintPath>..\package\NPinyin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +72,24 @@
     <Compile Include="FormPrb.Designer.cs">
       <DependentUpon>FormPrb.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTimeText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTimeText.Designer.cs">
+      <DependentUpon>FormTimeText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUntil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUntil.Designer.cs">
+      <DependentUpon>FormUntil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formwordexp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formwordexp.Designer.cs">
+      <DependentUpon>Formwordexp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -69,6 +97,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrb.resx">
       <DependentUpon>FormPrb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTimeText.resx">
+      <DependentUpon>FormTimeText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUntil.resx">
+      <DependentUpon>FormUntil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formwordexp.resx">
+      <DependentUpon>Formwordexp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +136,14 @@
     <Content Include="Rainbow_.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BingWallpaperGet\BingWallpaperGet.csproj">
+      <Project>{98A63FCB-76D8-4E54-A1D7-724E260DECC8}</Project>
+      <Name>BingWallpaperGet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xsy.likes. IfGenering\xsy.likes. IfGenering.csproj">
+      <Project>{47CD3A46-C397-425C-B07B-2604CAD4CE18}</Project>
+      <Name>xsy.likes. IfGenering</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xsy.likes.Base\xsy.likes.Base.csproj">
       <Project>{5767b7f1-8c8c-42b6-8c08-9a3114676826}</Project>
       <Name>xsy.likes.Base</Name>
@@ -111,10 +156,47 @@
       <Project>{b7afaa47-feb2-4fd7-9357-71adb8f6bb00}</Project>
       <Name>xsy.likes.Log</Name>
     </ProjectReference>
+    <ProjectReference Include="..\xsy.likes.szs\xsy.likes.szs.csproj">
+      <Project>{F66A17D1-20EC-4CF5-98CD-BA66B6C26B5C}</Project>
+      <Name>xsy.likes.szs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xsy.likes.WebServices\xsy.likes.WebServices.csproj">
       <Project>{fd226d1f-9369-4185-a554-397d639fd7e5}</Project>
       <Name>xsy.likes.WebServices</Name>
     </ProjectReference>
+    <ProjectReference Include="..\xsy.likkes.jvjc\xsy.likkes.jvjc.csproj">
+      <Project>{5E490DA4-EA7F-4D25-94F0-8EB3BCE0D357}</Project>
+      <Name>xsy.likkes.jvjc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

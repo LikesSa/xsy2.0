@@ -16,7 +16,10 @@ namespace WindowsFormsText
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            //Application.Run(new Form1());
+            //Application.Run(new Formwordexp());
+            Application.Run(new FormTimeText());
+            //Application.Run(new FormUntil());
         }
     }
 }
